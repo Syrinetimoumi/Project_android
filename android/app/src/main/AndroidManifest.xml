@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <application
+        android:usesCleartextTraffic="true"
+
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activity.ManageAccount.RegistredPostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ManageAccount.FriendsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ManageAccount.settingAccountActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity.ManageHome.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.ManageHome.TextPubActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ManageFriends.FriendProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ManageHome.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UpdatePost"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ManageAccount.BlockedFriendsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".displayPicture"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ManageProfile.ImageSelectionListnner"
+            android:exported="false"
+            android:label="@string/title_activity_image_selection_listnner"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".Activity.ManageProfile.ConfirmUpload"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ManageProfile.ProfileActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity.ManageHome.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.ResetPassword.SetPassword"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ResetPassword.Confirmation_Code"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ResetPassword.SendCodeWithEmail"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Register.VerifyCompte"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Register.ConfirmRegister"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Register.GenreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Register.TeleDateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Register.PasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Register.EmailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.Register.NomPrenomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
